@@ -7,7 +7,10 @@ namespace WebServices.Models
 {
     public class ReservationRespository
     {
+        //demo code no interfaces or DI
+
         private static ReservationRespository repo = new ReservationRespository();
+
         public static ReservationRespository Current
         {
             get { return repo; }

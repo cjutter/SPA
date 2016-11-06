@@ -23,7 +23,13 @@ namespace WebServices.Controllers
             return repo.Get(id);
         }
 
-        public Reservation PostReservation(Reservation item)
+        //public Reservation PostReservation(Reservation item)
+        //{
+        //    return repo.Add(item);
+        //}
+
+        [HttpPost]
+        public Reservation CreateReservation(Reservation item)
         {
             return repo.Add(item);
         }
@@ -31,6 +37,12 @@ namespace WebServices.Controllers
         public void DeleteReservation(int id)
         {
             repo.Remove(id);
+        }
+
+        [HttpPut]
+        public bool UpdateReservation(Reservation item)
+        {
+            return repo.Update(item);
         }
 
     }
